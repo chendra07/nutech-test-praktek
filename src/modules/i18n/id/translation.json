@@ -11,6 +11,32 @@
         "conflict": "Ada konflik, tidak dapat memproses data Anda{{additionalMsg}}",
         "internal_server_error": "Terjadi kesalahan pada server kami. Silakan coba lagi nanti{{additionalMsg}}"
     },
+    "class_validator": {
+        "is_UUID": "{{property}} UUID harus dalam format yang sesuai.",
+        "is_not_empty": "{{property}} merupakan data yang wajib diisi.",
+        "is_email": "format {{property}} tidak sesuai dengan standar.",
+        "matches": "{{property}} tidak sesuai dengan pola yang ditentukan",
+        "min_length": "{{property}} harus memiliki panjang karakter minimal sebanyak {{min}}.",
+        "length": "panjang karakter {{property}} harus berada dalam rentang {{min}} hingga {{max}}.",
+        "min": "nilai minimal {{property}} adalah {{min}}.",
+        "max": "nilai maksimal {{property}} adalah {{max}}.",
+        "is_number": "{{property}} harus berupa angka.",
+        "is_decimal": "{{property}} harus berupa angka desimal.",
+        "is_boolean": "{{property}} harus berupa boolean.",
+        "is_optional": "{{property}} merupakan data opsional.",
+        "is_enum": "nilai enum yang dimasukan untuk {{property}} tidak valid.",
+        "is_positive": "{{property}} harus berupa angka positif.",
+        "is_negative": "{{property}} harus berupa angka negatif.",
+        "is_date": "{{property}} harus berupa format tanggal.",
+        "no_symbol_string": "{{property}} tidak boleh memiliki simbol atau karakter spesial.",
+        "no_space_string": "{{property}} tidak boleh memiliki spasi",
+        "strong_password": "{{property}} setidaknya harus terdiri dari 1 angka, 1 huruf kecil dan 1 huruf besar.",
+        "is_non_primitive_array": "{{property}} harus berupa daftar objek yang diminta.",
+        "array_max_size": "{{property}} yang bisa dikirimkan maksimal {{max}}.",
+        "array_min_size": "{{property}} yang harus dikirimkan minimal {{min}}.",
+        "is_array": "{{property}} harus berupa daftar/array.",
+        "invalid_html": "Terdeteksi input tidak valid pada {{property}}."
+    },
     "general" : {
         "error": {
             "already_exists": "{{variable}} telah terdaftar.",

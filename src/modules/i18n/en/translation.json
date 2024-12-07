@@ -11,6 +11,32 @@
         "conflict": "There is a conflict, unable to process your data{{additionalMsg}}",
         "internal_server_error": "An error occurred on our server. Please try again later{{additionalMsg}}"
     },
+    "class_validator": {
+        "Is_UUID": "{{property}} must be in uuid format",
+        "Is_not_empty": "{{property}} is required.",
+        "Is_email": "Invalid format for {{property}}.",
+        "matches": "{{property}} does not match the required pattern.",
+        "min_length": "{{property}} must be at least {{min}} characters long.",
+        "length": "{{property}} must be {{min}} to {{max}} characters long.",
+        "min": "{{property}} minimum value is {{min}}.",
+        "max": "{{property}} maximum value is {{max}}.",
+        "is_number": "{{property}} must be a number.",
+        "is_decimal": "{{property}} must be a decimal.",
+        "is_boolean": "{{property}} must be a boolean.",
+        "is_optional": "{{property}} is optional.",
+        "is_enum": "Invalid enum value for {{property}}.",
+        "is_positive": "{{property}} must be a positive number.",
+        "is_negative": "{{property}} must be a negative number.",
+        "is_date": "{{property}} must be a date.",
+        "no_symbol_string": "{{property}} must have no symbols or special characters",
+        "no_space_string": "{{property}} must have no space",
+        "strong_password": "{{property}} must consist of at least 1 number, 1 lowercase letter and 1 capital letter.",
+        "is_non_primitive_array": "{{property}} must be an array of non-primitive objects.",
+        "array_max_size": "{{property}} maximum data that user can send is {{max}}.",
+        "array_min_size": "{{property}} minimum data that user must send is {{min}}.",
+        "is_array": "{{property}} must be an array.",
+        "invalid_html": "Invalid HTML input at {{property}}."
+    },
     "general": {
         "error": {
             "already_exists": "{{variable}} already exists.",
