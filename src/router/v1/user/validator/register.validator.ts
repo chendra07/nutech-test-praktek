@@ -25,6 +25,13 @@ export function validateInput_Register(
           req
         ),
       })
+      .min(1, {
+        message: t(
+          "class_validator.is_not_empty",
+          { property: t("property.user.email", null, req) },
+          req
+        ),
+      })
       .email({
         message: t("class_validator.is_email", null, req),
       })
