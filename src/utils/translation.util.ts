@@ -16,16 +16,23 @@ export function translateZodError(
   error: ZodError,
   type: "query" | "parameter" | "input" = "input"
 ) {
-  const result = error.errors.map((issue: ZodIssue) => {
-    const translatedMessage = t(
-      issue.message as any,
-      {
-        property: issue.path[0],
-      },
-      req
-    );
-    return type ? `${type} ${translatedMessage}` : translatedMessage;
-  });
+  if (error) {
+    const result = error.errors.map((issue: ZodIssue) => {
+      const key =
+        issue.message === "Required"
+          ? "class_validator.is_not_empty"
+          : issue.message;
 
-  return result.join(", ");
+      const translatedMessage = t(
+        key as any,
+        {
+          property: issue.path[0],
+        },
+        req
+      );
+      return type ? `${type} ${translatedMessage}` : translatedMessage;
+    });
+
+    return result.join(", ");
+  }
 }

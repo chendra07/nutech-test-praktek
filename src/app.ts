@@ -5,6 +5,7 @@ import { envi, envValidator, t } from "./utils";
 import middleware from "i18next-http-middleware";
 import i18next from "./modules/i18n/i18n";
 import bodyParser from "body-parser";
+import { validateInput_Register } from "./router/v1/user/validator/register.validator";
 
 export const app = express();
 envValidator(envi);
@@ -22,5 +23,9 @@ app.use(
 );
 
 app.get("/", (req: Request, res: Response) => {
+  res.send("nutech recruitment take home test");
+});
+
+app.post("/", validateInput_Register, (req: Request, res: Response) => {
   res.send("nutech recruitment take home test");
 });
