@@ -3,7 +3,7 @@ import jwt from "jsonwebtoken";
 import { responses } from "../utils/responses.util";
 import { envi, t } from "../utils";
 
-export function verifyToken(
+export function validateAuthToken(
   req: Request,
   res: Response,
   next: NextFunction

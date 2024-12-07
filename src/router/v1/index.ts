@@ -1,7 +1,7 @@
 import express from "express";
 
 //routers
-// import { usersRouter } from "../v1/users/users.router";
+// import { userRouter } from "../user/user.router";
 // import { authRouter } from "./auth/auth.router";
 
 //middlewares

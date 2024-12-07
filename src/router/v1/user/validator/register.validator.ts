@@ -25,7 +25,7 @@ const zodBodyRegister = z.object({
 
 export type BodyRegisterType = z.infer<typeof zodBodyRegister>;
 
-export function verifyInput_Register(
+export function validateInput_Register(
   req: Request,
   res: Response,
   next: NextFunction
