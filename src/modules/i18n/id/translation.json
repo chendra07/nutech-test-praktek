@@ -1,0 +1,60 @@
+{
+    "response": {
+        "ok": "permintaan berhasil{{additionalMsg}}",
+        "created": "permintaan berhasil dibuat{{additionalMsg}}",
+        "unauthorized": "Akses tidak sah{{additionalMsg}}",
+        "badrequest": "Permintaan tidak valid terjadi{{additionalMsg}}",
+        "forbidden_role": "Pengguna dengan peran [{{inputRole}}] tidak dapat mengakses sumber daya ini{{additionalMsg}}",
+        "forbidden": "Pengguna tidak dapat mengakses sumber daya ini{{additionalMsg}}",
+        "not_found": "Data {{variable}} tidak ditemukan.",
+        "not_allowed_role": "Pengguna dengan peran [{{inputRole}}] tidak dapat melakukan operasi ini{{additionalMsg}}",
+        "conflict": "Ada konflik, tidak dapat memproses data Anda{{additionalMsg}}",
+        "internal_server_error": "Terjadi kesalahan pada server kami. Silakan coba lagi nanti{{additionalMsg}}"
+    },
+    "general" : {
+        "error": {
+            "already_exists": "{{variable}} telah terdaftar.",
+            "not_found": "{{variable}} tidak ditemukan.",
+            "accpet_specific_extension": "hanya menerima ekstensi tertentu [{{extensions}}].",
+            "invalid": "{{variable}} tidak valid.",
+            "upload_failed": "gagal menyimpan {{variable}}.",
+            "process_failed": "gagal memproses {{variable}}.",
+            "no_input_detected": "tidak ada input terdeteksi.",
+            "file_too_large": "berkas terlalu besar, tidak boleh lebih dari {{size}}MB",
+            "duplicate_detected": "ditemukan adanya data duplikat pada data yang anda berikan.",
+            "invalid_credential": "kredensial invalid atau sudah kadarluwasa."
+        },
+        "info": {
+            "created": "{{variable}} telah berhasil dibuat.",
+            "updated": "{{variable}} telah berhasil diperbaharui.",
+            "deleted": "{{variable}} telah berhasil dihapus.",
+            "recovered": "{{variable}} telah berhasil dipulihkan.",
+            "upload_success": "{{variable}} berhasil disimpan.",
+            "success": "{{variable}} berhasil dijalankan."
+        }
+    },
+    "variable": {
+        "auth": {
+            "auth_token": "Token Otorisasi",
+            "refresh_token": "Token Refresh"
+        },
+        "user": {
+            "id": "id",
+            "user": "pengguna",
+            "username": "nama pengguna",
+            "password": "kata sandi",
+            "full_name": "nama lengkap",
+            "email": "email",
+            "role": "peran",
+            "profile_picture": "foto profil",
+            "status": "status",
+            "description": "deskripsi",
+            "credential": "kredensial"
+        },
+        "upload": {
+            "id": "id",
+            "file_path": "jalur file",
+            "description": "deskripsi"
+        }
+    }
+}

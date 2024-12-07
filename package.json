@@ -4,10 +4,11 @@
   "description": "test for nutech recruitment process",
   "main": "index.js",
   "scripts": {
+    "i18n": "i18n-types-generator -l en -p \"src/modules/i18n/{{lang}}/{{ns}}.json\" -o \"src/modules/i18n/translations.generated.ts\"",
     "build": "npx tsc",
-    "start": "node dist/index.js",
+    "start": "node dist/server.js",
     "start:prod": "npm run build && npm run start",
-    "start:dev": "nodemon --exec ts-node src/index.ts"
+    "start:dev": "npm run i18n && nodemon --exec ts-node src/server.ts"
   },
   "author": "Chendra Dewangga",
   "license": "ISC",
@@ -19,14 +20,21 @@
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "helmet": "^8.0.0",
+    "i18next": "^24.0.5",
+    "i18next-fs-backend": "^2.6.0",
+    "i18next-http-middleware": "^3.7.0",
     "jsonwebtoken": "^9.0.2",
+    "node-cron": "^3.0.3",
     "rimraf": "^6.0.1",
+    "typeorm": "^0.3.20",
     "uuid": "^11.0.3"
   },
   "devDependencies": {
+    "@morabotti/i18n-types-generator-cli": "^0.1.0",
     "@types/bcryptjs": "^2.4.6",
     "@types/cors": "^2.8.17",
     "@types/express": "^5.0.0",
+    "@types/i18n": "^0.13.12",
     "@types/jsonwebtoken": "^9.0.7",
     "@types/multer": "^1.4.12",
     "@types/node": "^22.10.1",

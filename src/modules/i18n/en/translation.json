@@ -1,0 +1,60 @@
+{
+    "response": {
+        "ok": "Operation was successful{{additionalMsg}}",
+        "created": "Creation was successful{{additionalMsg}}",
+        "unauthorized": "Unauthorized access{{additionalMsg}}",
+        "badrequest": "A bad request occurred{{additionalMsg}}",
+        "forbidden_role": "Users with role [{{inputRole}}] cannot access this resource{{additionalMsg}}",
+        "forbidden": "Users cannot access this resource{{additionalMsg}}",
+        "not_found": "Data {{variable}} not found.",
+        "not_allowed_role": "Users with role [{{inputRole}}] cannot perform this operation{{additionalMsg}}",
+        "conflict": "There is a conflict, unable to process your data{{additionalMsg}}",
+        "internal_server_error": "An error occurred on our server. Please try again later{{additionalMsg}}"
+    },
+    "general": {
+        "error": {
+            "already_exists": "{{variable}} already exists.",
+            "not_found": "{{variable}} not found.",
+            "accpet_specific_extension": "only accept [{{extensions}}] extensions.",
+            "invalid": "{{variable}} are invalid.",
+            "upload_failed": "failed to upload {{variable}}.",
+            "process_failed": "failed to process {{variable}}.",
+            "no_input_detected": "no input detected.",
+            "file_too_large": "file too large, it cannot exceed {{size}}MB",
+            "duplicate_detected": "duplicate data detected on your input.",
+            "invalid_credential": "credential invalid or already expired."
+        },
+        "info": {
+            "created": "{{variable}} telah berhasil dibuat.",
+            "updated": "{{variable}} telah berhasil diperbaharui.",
+            "deleted": "{{variable}} telah berhasil dihapus.",
+            "recovered": "{{variable}} telah berhasil dipulihkan.",
+            "upload_success": "{{variable}} berhasil disimpan.",
+            "success": "{{variable}} berhasil dijalankan."
+        }
+    },
+    "variable": {
+        "auth": {
+            "auth_token": "auth token",
+            "refresh_token": "refresh token"
+        },
+        "user": {
+            "id": "id",
+            "user": "user",
+            "username": "username",
+            "password": "password",
+            "full_name": "full name",
+            "email": "email",
+            "role": "role",
+            "profile_picture": "profile picture",
+            "status": "status",
+            "description": "description",
+            "credential": "credential"
+        },
+        "upload": {
+            "id": "id",
+            "file_path": "file path",
+            "description": "description"
+        }
+    }
+}
