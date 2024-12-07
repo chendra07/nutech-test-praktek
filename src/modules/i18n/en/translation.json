@@ -30,7 +30,11 @@
         "no_space_string": "{{property}} must have no space",
         "strong_password": "{{property}} must consist of at least 1 number, 1 lowercase letter and 1 capital letter",
         "is_non_primitive_array": "{{property}} must be an array of non-primitive objects",
-        "is_array": "{{property}} must be an array"
+        "is_array": "{{property}} must be an array",
+        "min_length": "{{property}} must be at least {{min}} characters long.",
+        "length": "{{property}} must be {{min}} to {{max}} characters long.",
+        "min": "{{property}} minimum value is {{min}}.",
+        "max": "{{property}} maximum value is {{max}}."
     },
     "general": {
         "error": {
@@ -65,6 +69,8 @@
             "username": "username",
             "password": "password",
             "full_name": "full name",
+            "first_name": "first name",
+            "last_name": "last name",
             "email": "email",
             "role": "role",
             "profile_picture": "profile picture",

@@ -8,6 +8,7 @@ import bodyParser from "body-parser";
 import { responses } from "./utils/responses.util";
 import { dataSource } from "./modules/db/datasource";
 import { SeederEntity } from "./modules/db/entities/seeder.entity";
+import { validateInput_Register } from "./router/v1/user/validator/register.validator";
 
 export const app = express();
 envValidator(envi);
@@ -28,11 +29,20 @@ app.get("/", (req: Request, res: Response): any => {
   return responses.res200(req, res, null, "nutech recruitment take home test");
 });
 
-app.get("/a", async (req: Request, res: Response): Promise<any> => {
-  const x = await dataSource.manager.transaction(async (t) => {
-    return await t.find(SeederEntity);
-  });
-  console.log(x);
+app.post(
+  "/a",
+  validateInput_Register,
+  async (req: Request, res: Response): Promise<any> => {
+    const x = await dataSource.manager.transaction(async (t) => {
+      return await t.find(SeederEntity);
+    });
+    console.log(x);
 
-  return responses.res200(req, res, null, "nutech recruitment take home test");
-});
+    return responses.res200(
+      req,
+      res,
+      null,
+      "nutech recruitment take home test"
+    );
+  }
+);

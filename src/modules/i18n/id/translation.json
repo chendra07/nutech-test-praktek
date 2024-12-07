@@ -30,7 +30,11 @@
         "no_space_string": "{{property}} tidak boleh memiliki spasi",
         "strong_password": "{{property}} setidaknya harus terdiri dari 1 angka, 1 huruf kecil dan 1 huruf besar",
         "is_non_primitive_array": "{{property}} harus berupa daftar objek yang diminta",
-        "is_array": "{{property}} harus berupa daftar/array"
+        "is_array": "{{property}} harus berupa daftar/array",
+        "min_length": "{{property}} harus memiliki panjang karakter minimal sebanyak {{min}}.",
+        "length": "panjang karakter {{property}} harus berada dalam rentang {{min}} hingga {{max}}.",
+        "min": "nilai minimal {{property}} adalah {{min}}.",
+        "max": "nilai maksimal {{property}} adalah {{max}}."
     },
     "general" : {
         "error": {
@@ -65,6 +69,8 @@
             "username": "nama pengguna",
             "password": "kata sandi",
             "full_name": "nama lengkap",
+            "first_name": "nama depan",
+            "last_name": "nama belakang",
             "email": "email",
             "role": "peran",
             "profile_picture": "foto profil",

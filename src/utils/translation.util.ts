@@ -11,26 +11,13 @@ export function t(
   return (req ? req.t(key, options) : i18next.t(key, options)) as string;
 }
 
-export function translateZodError(
-  req: Request,
+export function extractZodError(
   error: ZodError,
   type: "query" | "parameter" | "input" = "input"
 ) {
   if (error) {
     const result = error.errors.map((issue: ZodIssue) => {
-      const key =
-        issue.message === "Required"
-          ? "class_validator.is_not_empty"
-          : issue.message;
-
-      const translatedMessage = t(
-        key as any,
-        {
-          property: issue.path[0],
-        },
-        req
-      );
-      return type ? `${type} ${translatedMessage}` : translatedMessage;
+      return type ? `${type} ${issue.message}` : issue.message;
     });
 
     return result.join(", ");
