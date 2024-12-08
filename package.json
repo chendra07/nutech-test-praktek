@@ -9,7 +9,7 @@
   "scripts": {
     "i18n": "i18n-types-generator -l en -p \"src/modules/i18n/{{lang}}/{{ns}}.json\" -o \"src/modules/i18n/translations.generated.ts\"",
     "start:prod": "npx tsc && node dist/server.js",
-    "start": "node build/index.js",
+    "start": "node dist/server.js",
     "build": "tsc",
     "postinstall": "npm run build",
     "start:dev": "npm run i18n && nodemon --exec ts-node src/server.ts",
