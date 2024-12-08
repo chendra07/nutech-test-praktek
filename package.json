@@ -20,6 +20,7 @@
   "author": "Chendra Dewangga",
   "license": "ISC",
   "dependencies": {
+    "@types/multer": "^1.4.12",
     "@jorgebodega/typeorm-seeding": "^6.0.1",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.20.3",
@@ -49,7 +50,6 @@
     "@types/express": "^5.0.0",
     "@types/i18n": "^0.13.12",
     "@types/jsonwebtoken": "^9.0.7",
-    "@types/multer": "^1.4.12",
     "@types/node": "^22.10.1",
     "nodemon": "^3.1.7",
     "ts-node": "^10.9.2",
