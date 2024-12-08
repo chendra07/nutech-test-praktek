@@ -50,15 +50,19 @@
             "invalid_credential": "credential invalid or already expired"
         },
         "info": {
-            "created": "{{property}} telah berhasil dibuat",
-            "updated": "{{property}} telah berhasil diperbaharui",
-            "deleted": "{{property}} telah berhasil dihapus",
-            "recovered": "{{property}} telah berhasil dipulihkan",
-            "upload_success": "{{property}} berhasil disimpan",
-            "success": "{{property}} berhasil dijalankan"
+            "created": "{{property}} created",
+            "updated": "{{property}} updated",
+            "deleted": "{{property}} deleted",
+            "recovered": "{{property}} recovered",
+            "upload_success": "{{property}} upload saved",
+            "success": "{{property}} operation success"
         }
     },
     "property": {
+        "pagination": {
+            "offset": "page offset",
+            "limit": "page limit"
+        },
         "auth": {
             "auth_token": "auth token",
             "refresh_token": "refresh token"
@@ -76,12 +80,23 @@
             "profile_picture": "profile picture",
             "status": "status",
             "description": "description",
-            "credential": "credential"
+            "credential": "credential",
+            "amount": "balance/amount"
         },
         "upload": {
             "id": "id",
             "file_path": "file path",
             "description": "description"
+        },
+        "transaction": {
+            "transaction": "transaction",
+            "service_code": "service code",
+            "top_up_amount": "top up amount"
+        }
+    },
+    "module": {
+        "transaction": {
+            "not_enough_balance": "unable to purchase this product. Your balance: [{{amount}}], the price: [{{service_tariff}}]"
         }
     }
 }

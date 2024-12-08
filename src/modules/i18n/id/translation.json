@@ -59,6 +59,10 @@
         }
     },
     "property": {
+        "pagination": {
+            "offset": "nomor halaman",
+            "limit": "jumlah data"
+        },
         "auth": {
             "auth_token": "Token Otorisasi",
             "refresh_token": "Token Refresh"
@@ -76,12 +80,23 @@
             "profile_picture": "foto profil",
             "status": "status",
             "description": "deskripsi",
-            "credential": "kredensial"
+            "credential": "kredensial",
+            "amount": "saldo"
         },
         "upload": {
             "id": "id",
             "file_path": "jalur file",
             "description": "deskripsi"
+        },
+        "transaction": {
+            "transaction": "transaksi",
+            "service_code": "kode layanan",
+            "top_up_amount": "jumlah saldo top up"
+        },
+        "module": {
+        "transaction": {
+            "not_enough_balance": "tidak dapat membeli produk ini, jumlah saldo anda: [{{amount}}], biaya layanan: [{{service_tariff}}]"
         }
+    }
     }
 }

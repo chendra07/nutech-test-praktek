@@ -8,7 +8,7 @@ import bodyParser from "body-parser";
 import { responses } from "./utils/responses.util";
 import { dataSource } from "./modules/db/datasource";
 import { SeederEntity } from "./modules/db/entities/seeder.entity";
-import { validateInput_Register } from "./router/v1/user/validator/register.validator";
+import { validateInput_Register } from "./router/v1/membership/validator/register.validator";
 import { multerStorageCfg } from "./modules/file/multer.config";
 import multer from "multer";
 
