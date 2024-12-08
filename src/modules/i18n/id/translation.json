@@ -47,7 +47,7 @@
             "no_input_detected": "tidak ada input terdeteksi",
             "file_too_large": "berkas terlalu besar, tidak boleh lebih dari {{size}}MB",
             "duplicate_detected": "ditemukan adanya data duplikat pada data yang anda berikan",
-            "invalid_credential": "kredensial invalid atau sudah kadarluwasa"
+            "invalid_credential": "kredensial invalid"
         },
         "info": {
             "created": "{{property}} telah berhasil dibuat",
@@ -59,6 +59,11 @@
         }
     },
     "property": {
+        "general": {
+            "process": "proses",
+            "login": "login",
+            "register": "registrasi"
+        },
         "pagination": {
             "offset": "nomor halaman",
             "limit": "jumlah data"

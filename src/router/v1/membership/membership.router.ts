@@ -1,23 +1,25 @@
-import { Request, Response } from "express";
-import { responses } from "../../../utils/responses.util";
-import { BodyRegisterType } from "./validator/register.validator";
+import express, { Request, Response } from "express";
+import { validateInput_Login } from "./validator/login.validator";
+import {
+  httpGetProfile,
+  httpPostLogin,
+  httpPostRegister,
+  httpPutUpdate,
+  httpPutUpdateProfileImage,
+} from "./membership.controller";
+import { validateInput_Register } from "./validator/register.validator";
+import { validateAuthToken } from "../../../middlewares/auth.middleware";
+import { validateInput_UpdateProfile } from "./validator/updateProfile.validator";
 
-export async function httpPostRegister(req: Request, res: Response) {
-  const { email, password } = req.body as BodyRegisterType;
+export const authRouter = express.Router();
 
-  return responses.res200(
-    req,
-    res,
-    {
-      token: "hehe accessToken",
-    },
-    "User data created"
-  );
-
-  // sequelizeCfg
-  //   .transaction(async (t) => {
-  //   })
-  //   .catch((error) => {
-  //     return responses.res500(req, res, null, error.toString());
-  //   });
-}
+authRouter.post("/login", validateInput_Login, httpPostLogin);
+authRouter.post("/register", validateInput_Register, httpPostRegister);
+authRouter.get("/profile", validateAuthToken, httpGetProfile);
+authRouter.put(
+  "/profile/update",
+  validateAuthToken,
+  validateInput_UpdateProfile,
+  httpPutUpdate
+);
+authRouter.put("/profile/image", validateAuthToken, httpPutUpdateProfileImage);

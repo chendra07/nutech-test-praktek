@@ -47,7 +47,7 @@
             "no_input_detected": "no input detected",
             "file_too_large": "file too large, it cannot exceed {{size}}MB",
             "duplicate_detected": "duplicate data detected on your input",
-            "invalid_credential": "credential invalid or already expired"
+            "invalid_credential": "credential invalid"
         },
         "info": {
             "created": "{{property}} created",
@@ -59,6 +59,11 @@
         }
     },
     "property": {
+        "general": {
+            "process": "process",
+            "login": "login",
+            "register": "registration"
+        },
         "pagination": {
             "offset": "page offset",
             "limit": "page limit"

@@ -111,7 +111,7 @@ function res404(
     status: 404,
     message: t(
       "response.not_found",
-      { property: message ? `: ${message}` : "." },
+      { property: message ? `${message}` : "." },
       req
     ),
     data: body,
