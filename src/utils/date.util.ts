@@ -82,3 +82,11 @@ export function parseDuration(input: string = "0s"): number {
       throw new Error("Invalid duration unit");
   }
 }
+
+export function dateToUnix(input: number = Date.now()) {
+  return Math.floor(input / 1000);
+}
+
+export function unixToDate(input: number = Date.now()) {
+  return new Date(input * 1000);
+}

@@ -11,7 +11,11 @@ function res200(
 ) {
   return res.status(200).json({
     status: 200,
-    message: t("response.ok", { additionalMsg: `: ${message}` || "." }, req),
+    message: t(
+      "response.ok",
+      { additionalMsg: message ? `: ${message}` : "." },
+      req
+    ),
     data: body,
   });
 }
@@ -28,7 +32,7 @@ function res201(
     message: t(
       "response.created",
       {
-        additionalMsg: `: ${message}` || ".",
+        additionalMsg: message ? `: ${message}` : ".",
       },
       req
     ),
@@ -48,7 +52,7 @@ function res400(
     message: t(
       "response.badrequest",
       {
-        additionalMsg: `: ${message}` || ".",
+        additionalMsg: message ? `: ${message}` : ".",
       },
       req
     ),
@@ -68,7 +72,7 @@ function res401(
     message: t(
       "response.unauthorized",
       {
-        additionalMsg: `: ${message}` || ".",
+        additionalMsg: message ? `: ${message}` : ".",
       },
       req
     ),
@@ -88,7 +92,7 @@ function res403(
     message: t(
       "response.forbidden",
       {
-        additionalMsg: `: ${message}` || ".",
+        additionalMsg: message ? `: ${message}` : ".",
       },
       req
     ),
@@ -105,7 +109,11 @@ function res404(
 ) {
   return res.status(404).json({
     status: 404,
-    message: t("response.not_found", { property: `: ${message}` || "." }, req),
+    message: t(
+      "response.not_found",
+      { property: message ? `: ${message}` : "." },
+      req
+    ),
     data: body,
   });
 }
@@ -122,7 +130,7 @@ function res409(
     message: t(
       "response.conflict",
       {
-        additionalMsg: `: ${message}` || ".",
+        additionalMsg: message ? `: ${message}` : ".",
       },
       req
     ),
@@ -142,7 +150,7 @@ function res500(
     message: t(
       "response.internal_server_error",
       {
-        additionalMsg: `: ${message}` || ".",
+        additionalMsg: message ? `: ${message}` : ".",
       },
       req
     ),
