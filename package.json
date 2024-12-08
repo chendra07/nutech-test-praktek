@@ -13,7 +13,7 @@
     "migration:run": "npm run typeorm -- migration:run",
     "migration:generate": "npm run typeorm -- migration:generate",
     "migration:revert": "npm run typeorm -- migration:revert",
-    "seed:run": "npm run build && typeorm-seeding seed -d dist/modules/db/datasource.js dist/db/seeders/*.seeder.js"
+    "seed:run": "npm run build && typeorm-seeding seed -d dist/modules/db/datasource.js dist/modules/db/seeder/*.seeder.js"
   },
   "author": "Chendra Dewangga",
   "license": "ISC",
