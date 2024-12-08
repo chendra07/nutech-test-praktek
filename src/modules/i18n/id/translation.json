@@ -6,34 +6,69 @@
         "badrequest": "Permintaan tidak valid terjadi{{additionalMsg}}",
         "forbidden_role": "Pengguna dengan peran [{{inputRole}}] tidak dapat mengakses sumber daya ini{{additionalMsg}}",
         "forbidden": "Pengguna tidak dapat mengakses sumber daya ini{{additionalMsg}}",
-        "not_found": "Data {{variable}} tidak ditemukan.",
+        "not_found": "Data {{property}} tidak ditemukan",
         "not_allowed_role": "Pengguna dengan peran [{{inputRole}}] tidak dapat melakukan operasi ini{{additionalMsg}}",
         "conflict": "Ada konflik, tidak dapat memproses data Anda{{additionalMsg}}",
-        "internal_server_error": "Terjadi kesalahan pada server kami. Silakan coba lagi nanti{{additionalMsg}}"
+        "internal_server_error": "Terjadi kesalahan pada server kami Silakan coba lagi nanti{{additionalMsg}}",
+        "not_enough_balance": "tidak dapat membeli produk ini, jumlah saldo anda: [{{amount}}], biaya layanan: [{{service_tariff}}]"
+    },
+    "class_validator": {
+        "is_UUID": "{{property}} UUID harus dalam format yang sesuai",
+        "is_not_empty": "{{property}} merupakan data yang wajib diisi",
+        "is_email": "format email tidak sesuai dengan standar",
+        "too_short": "{{property}} terlalu pendek",
+        "too_long": "{{property}} terlalu panjang",
+        "matches": "{{property}} tidak sesuai dengan pola yang ditentukan",
+        "is_number": "{{property}} harus berupa angka",
+        "is_decimal": "{{property}} harus berupa angka desimal",
+        "is_boolean": "{{property}} harus berupa boolean",
+        "is_optional": "{{property}} merupakan data opsional",
+        "is_enum": "nilai enum yang dimasukan untuk {{property}} tidak valid",
+        "is_positive": "{{property}} harus berupa angka positif",
+        "is_negative": "{{property}} harus berupa angka negatif",
+        "is_date": "{{property}} harus berupa format tanggal",
+        "no_symbol_string": "{{property}} tidak boleh memiliki simbol atau karakter spesial",
+        "no_space_string": "{{property}} tidak boleh memiliki spasi",
+        "strong_password": "{{property}} setidaknya harus terdiri dari 1 angka, 1 huruf kecil dan 1 huruf besar",
+        "is_non_primitive_array": "{{property}} harus berupa daftar objek yang diminta",
+        "is_array": "{{property}} harus berupa daftar/array",
+        "min_length": "{{property}} harus memiliki panjang karakter minimal sebanyak {{min}}.",
+        "length": "panjang karakter {{property}} harus berada dalam rentang {{min}} hingga {{max}}.",
+        "min": "nilai minimal {{property}} adalah {{min}}.",
+        "max": "nilai maksimal {{property}} adalah {{max}}."
     },
     "general" : {
         "error": {
-            "already_exists": "{{variable}} telah terdaftar.",
-            "not_found": "{{variable}} tidak ditemukan.",
-            "accpet_specific_extension": "hanya menerima ekstensi tertentu [{{extensions}}].",
-            "invalid": "{{variable}} tidak valid.",
-            "upload_failed": "gagal menyimpan {{variable}}.",
-            "process_failed": "gagal memproses {{variable}}.",
-            "no_input_detected": "tidak ada input terdeteksi.",
+            "already_exists": "{{property}} telah terdaftar",
+            "not_found": "{{property}} tidak ditemukan",
+            "accpet_specific_extension": "hanya menerima ekstensi tertentu [{{extensions}}]",
+            "invalid": "{{property}} tidak valid",
+            "upload_failed": "gagal menyimpan {{property}}",
+            "process_failed": "gagal memproses {{property}}",
+            "no_input_detected": "tidak ada input terdeteksi",
             "file_too_large": "berkas terlalu besar, tidak boleh lebih dari {{size}}MB",
-            "duplicate_detected": "ditemukan adanya data duplikat pada data yang anda berikan.",
-            "invalid_credential": "kredensial invalid atau sudah kadarluwasa."
+            "duplicate_detected": "ditemukan adanya data duplikat pada data yang anda berikan",
+            "invalid_credential": "kredensial invalid"
         },
         "info": {
-            "created": "{{variable}} telah berhasil dibuat.",
-            "updated": "{{variable}} telah berhasil diperbaharui.",
-            "deleted": "{{variable}} telah berhasil dihapus.",
-            "recovered": "{{variable}} telah berhasil dipulihkan.",
-            "upload_success": "{{variable}} berhasil disimpan.",
-            "success": "{{variable}} berhasil dijalankan."
+            "created": "{{property}} telah berhasil dibuat",
+            "updated": "{{property}} telah berhasil diperbaharui",
+            "deleted": "{{property}} telah berhasil dihapus",
+            "recovered": "{{property}} telah berhasil dipulihkan",
+            "upload_success": "{{property}} berhasil disimpan",
+            "success": "{{property}} berhasil dijalankan"
         }
     },
-    "variable": {
+    "property": {
+        "general": {
+            "process": "proses",
+            "login": "login",
+            "register": "registrasi"
+        },
+        "pagination": {
+            "offset": "nomor halaman",
+            "limit": "jumlah data"
+        },
         "auth": {
             "auth_token": "Token Otorisasi",
             "refresh_token": "Token Refresh"
@@ -44,17 +79,29 @@
             "username": "nama pengguna",
             "password": "kata sandi",
             "full_name": "nama lengkap",
+            "first_name": "nama depan",
+            "last_name": "nama belakang",
             "email": "email",
             "role": "peran",
             "profile_picture": "foto profil",
             "status": "status",
             "description": "deskripsi",
-            "credential": "kredensial"
+            "credential": "kredensial",
+            "amount": "saldo"
         },
         "upload": {
             "id": "id",
             "file_path": "jalur file",
             "description": "deskripsi"
-        }
+        },
+        "ppob_service": {
+            "ppob_service": "layanan PPOB",
+            "service_code": "kode layanan PPOB"
+        },
+        "transaction": {
+            "transaction": "transaksi",
+            "service_code": "kode layanan",
+            "top_up_amount": "jumlah saldo top up"
+        }    
     }
 }

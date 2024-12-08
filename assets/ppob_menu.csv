@@ -1,0 +1,13 @@
+service_code,service_name,file_id,service_tariff
+PAJAK,Pajak PBB,b659bea8-3857-4911-9175-9037cf9c7aca,40000
+PLN,Listrik,d63a7e6f-e05d-4000-86e0-fe5cf4310017,10000
+PDAM,PDAM Berlangganan,34f59a53-da32-4952-abbe-ec9adfba98ba,40000
+PULSA,Pulsa,b8b692da-738f-45cc-9735-8991b685adfc,40000
+PGN,PGN Berlangganan,f8722454-ded4-4f32-a888-fd58a23d7fe7,50000
+MUSIK,Musik Berlangganan,d382cd45-c6ca-4d67-bb01-6fbcb4d35085,50000
+TV,TV Berlangganan,3dc5f66a-b915-48c8-bc18-4f76aaca0b4a,50000
+PAKET_DATA,Paket data,855b05ce-8070-4f89-98d2-cfdf5a8b16bc,50000
+VOUCHER_GAME,Voucher Game,8c2acd9d-cb06-4f60-b907-91693bab6045,100000
+VOUCHER_MAKANAN,Voucher Makanan,c4d49112-6fa5-4dc5-beee-8d0387c1ccd2,100000
+QURBAN,Qurban,48b8e442-6345-48dc-84da-2958af84a94a,200000
+ZAKAT,Zakat,ef124cc8-5723-4dd0-bcdb-c90066cea895,300000

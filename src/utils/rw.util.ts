@@ -36,7 +36,7 @@ export async function deleteFile(savedPath: string) {
   try {
     const pathFile = path.join(process.cwd(), savedPath);
     if (!fs.existsSync(pathFile)) {
-      throw new Error();
+      throw new Error("no file detected");
     }
 
     fs.rmSync(pathFile, { recursive: true, force: true });

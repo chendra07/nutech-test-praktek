@@ -8,12 +8,19 @@
     "build": "npx tsc",
     "start": "node dist/server.js",
     "start:prod": "npm run build && npm run start",
-    "start:dev": "npm run i18n && nodemon --exec ts-node src/server.ts"
+    "start:dev": "npm run i18n && nodemon --exec ts-node src/server.ts",
+    "typeorm": "npm run build && npx typeorm -d dist/modules/db/datasource.js",
+    "migration:run": "npm run typeorm -- migration:run",
+    "migration:generate": "npm run typeorm -- migration:generate",
+    "migration:revert": "npm run typeorm -- migration:revert",
+    "seed:run": "npm run build && typeorm-seeding seed -d dist/modules/db/datasource.js dist/modules/db/seeder/*.seeder.js"
   },
   "author": "Chendra Dewangga",
   "license": "ISC",
   "dependencies": {
+    "@jorgebodega/typeorm-seeding": "^6.0.1",
     "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.3",
     "cloudinary": "^2.5.1",
     "cors": "^2.8.5",
     "csv-parser": "^3.0.0",
@@ -24,10 +31,14 @@
     "i18next-fs-backend": "^2.6.0",
     "i18next-http-middleware": "^3.7.0",
     "jsonwebtoken": "^9.0.2",
+    "multer": "^1.4.5-lts.1",
     "node-cron": "^3.0.3",
+    "pg": "^8.13.1",
     "rimraf": "^6.0.1",
     "typeorm": "^0.3.20",
-    "uuid": "^11.0.3"
+    "uuid": "^11.0.3",
+    "zod": "^3.23.8",
+    "zod-validation-error": "^3.4.0"
   },
   "devDependencies": {
     "@morabotti/i18n-types-generator-cli": "^0.1.0",

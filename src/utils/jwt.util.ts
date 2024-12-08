@@ -3,8 +3,8 @@ import * as jwt from "jsonwebtoken";
 import { envi } from "./environment.util";
 
 export type JWTType = {
-  userId: string;
-  idToken: string;
+  id: string;
+  email: string;
   iat?: number;
   exp?: number;
 };
@@ -49,7 +49,7 @@ export async function verifyAndExtractJWT(secret: string, token: string) {
         resolve(null);
       }
 
-      if (!extractedToken?.userId || !extractedToken?.idToken) {
+      if (!extractedToken?.id) {
         resolve(null);
       }
 

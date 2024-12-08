@@ -1,0 +1,6 @@
+id,email,first_name,last_name,password,amount
+88bb0126-f7fe-4bf2-9f2a-ed7f1e80b4ba,dummy1@mail.com,john,doe,Dummy123#,100000
+3d3ae5cc-e982-4069-bdf0-464d1b24a14f,dummy2@mail.com,kelechi,smadar,Dummy123#,100000
+d0544347-27f8-4098-8a19-b02f284c4e31,dummy3@mail.com,hrothgar,gallus,Dummy123#,100000
+91db84e2-500b-496d-a82b-db4392b1a8ff,dummy4@mail.com,nadia,noelia,Dummy123#,100000
+7bdc0902-3c33-44d2-b848-c291e2ce3928,dummy5@mail.com,gunnar,oto,Dummy123#,100000

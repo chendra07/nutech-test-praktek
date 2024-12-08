@@ -11,7 +11,11 @@ function res200(
 ) {
   return res.status(200).json({
     status: 200,
-    message: t(req, "response.ok", { additionalMsg: message || "." }),
+    message: t(
+      "response.ok",
+      { additionalMsg: message ? `: ${message}` : "." },
+      req
+    ),
     data: body,
   });
 }
@@ -25,7 +29,13 @@ function res201(
 ) {
   return res.status(201).json({
     status: 201,
-    message: t(req, "response.created", { additionalMsg: message || "." }),
+    message: t(
+      "response.created",
+      {
+        additionalMsg: message ? `: ${message}` : ".",
+      },
+      req
+    ),
     data: body,
   });
 }
@@ -39,7 +49,13 @@ function res400(
 ) {
   return res.status(400).json({
     status: 400,
-    message: t(req, "response.badrequest", { additionalMsg: message || "." }),
+    message: t(
+      "response.badrequest",
+      {
+        additionalMsg: message ? `: ${message}` : ".",
+      },
+      req
+    ),
     data: body,
   });
 }
@@ -53,7 +69,13 @@ function res401(
 ) {
   return res.status(401).json({
     status: 401,
-    message: t(req, "response.unauthorized", { additionalMsg: message || "." }),
+    message: t(
+      "response.unauthorized",
+      {
+        additionalMsg: message ? `: ${message}` : ".",
+      },
+      req
+    ),
     data: body,
   });
 }
@@ -67,7 +89,13 @@ function res403(
 ) {
   return res.status(403).json({
     status: 403,
-    message: t(req, "response.forbidden", { additionalMsg: message || "." }),
+    message: t(
+      "response.forbidden",
+      {
+        additionalMsg: message ? `: ${message}` : ".",
+      },
+      req
+    ),
     data: body,
   });
 }
@@ -81,7 +109,11 @@ function res404(
 ) {
   return res.status(404).json({
     status: 404,
-    message: t(req, "response.not_found", { variable: message || "." }),
+    message: t(
+      "response.not_found",
+      { property: message ? `${message}` : "." },
+      req
+    ),
     data: body,
   });
 }
@@ -95,7 +127,13 @@ function res409(
 ) {
   return res.status(409).json({
     status: 409,
-    message: t(req, "response.conflict", { additionalMsg: message || "." }),
+    message: t(
+      "response.conflict",
+      {
+        additionalMsg: message ? `: ${message}` : ".",
+      },
+      req
+    ),
     data: body,
   });
 }
@@ -109,9 +147,13 @@ function res500(
 ) {
   return res.status(500).json({
     status: 500,
-    message: t(req, "response.internal_server_error", {
-      additionalMsg: message || ".",
-    }),
+    message: t(
+      "response.internal_server_error",
+      {
+        additionalMsg: message ? `: ${message}` : ".",
+      },
+      req
+    ),
     data: body,
   });
 }

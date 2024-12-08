@@ -6,3 +6,4 @@ export * from "./bcrypt.util";
 export * from "./jwt.util";
 export * from "./fileValidator.util";
 export * from "./translation.util";
+export * from "./other.util";

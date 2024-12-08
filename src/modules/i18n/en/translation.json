@@ -6,34 +6,69 @@
         "badrequest": "A bad request occurred{{additionalMsg}}",
         "forbidden_role": "Users with role [{{inputRole}}] cannot access this resource{{additionalMsg}}",
         "forbidden": "Users cannot access this resource{{additionalMsg}}",
-        "not_found": "Data {{variable}} not found.",
+        "not_found": "Data {{property}} not found",
         "not_allowed_role": "Users with role [{{inputRole}}] cannot perform this operation{{additionalMsg}}",
         "conflict": "There is a conflict, unable to process your data{{additionalMsg}}",
-        "internal_server_error": "An error occurred on our server. Please try again later{{additionalMsg}}"
+        "internal_server_error": "An error occurred on our server Please try again later{{additionalMsg}}",
+        "not_enough_balance": "unable to purchase this product. Your balance: [{{amount}}], the price: [{{service_tariff}}]"
+    },
+    "class_validator": {
+        "is_UUID": "{{property}} must be in uuid format",
+        "is_not_empty": "{{property}} is required",
+        "is_email": "Invalid format for email",
+        "too_short": "{{property}} too short",
+        "too_long": "{{property}} too long",
+        "matches": "{{property}} does not match the required pattern",
+        "is_number": "{{property}} must be a number",
+        "is_decimal": "{{property}} must be a decimal",
+        "is_boolean": "{{property}} must be a boolean",
+        "is_optional": "{{property}} is optional",
+        "is_enum": "Invalid enum value for {{property}}",
+        "is_positive": "{{property}} must be a positive number",
+        "is_negative": "{{property}} must be a negative number",
+        "is_date": "{{property}} must be a date",
+        "no_symbol_string": "{{property}} must have no symbols or special characters",
+        "no_space_string": "{{property}} must have no space",
+        "strong_password": "{{property}} must consist of at least 1 number, 1 lowercase letter and 1 capital letter",
+        "is_non_primitive_array": "{{property}} must be an array of non-primitive objects",
+        "is_array": "{{property}} must be an array",
+        "min_length": "{{property}} must be at least {{min}} characters long.",
+        "length": "{{property}} must be {{min}} to {{max}} characters long.",
+        "min": "{{property}} minimum value is {{min}}.",
+        "max": "{{property}} maximum value is {{max}}."
     },
     "general": {
         "error": {
-            "already_exists": "{{variable}} already exists.",
-            "not_found": "{{variable}} not found.",
-            "accpet_specific_extension": "only accept [{{extensions}}] extensions.",
-            "invalid": "{{variable}} are invalid.",
-            "upload_failed": "failed to upload {{variable}}.",
-            "process_failed": "failed to process {{variable}}.",
-            "no_input_detected": "no input detected.",
+            "already_exists": "{{property}} already exists",
+            "not_found": "{{property}} not found",
+            "accpet_specific_extension": "only accept [{{extensions}}] extensions",
+            "invalid": "{{property}} are invalid",
+            "upload_failed": "failed to upload {{property}}",
+            "process_failed": "failed to process {{property}}",
+            "no_input_detected": "no input detected",
             "file_too_large": "file too large, it cannot exceed {{size}}MB",
-            "duplicate_detected": "duplicate data detected on your input.",
-            "invalid_credential": "credential invalid or already expired."
+            "duplicate_detected": "duplicate data detected on your input",
+            "invalid_credential": "credential invalid"
         },
         "info": {
-            "created": "{{variable}} telah berhasil dibuat.",
-            "updated": "{{variable}} telah berhasil diperbaharui.",
-            "deleted": "{{variable}} telah berhasil dihapus.",
-            "recovered": "{{variable}} telah berhasil dipulihkan.",
-            "upload_success": "{{variable}} berhasil disimpan.",
-            "success": "{{variable}} berhasil dijalankan."
+            "created": "{{property}} created",
+            "updated": "{{property}} updated",
+            "deleted": "{{property}} deleted",
+            "recovered": "{{property}} recovered",
+            "upload_success": "{{property}} upload saved",
+            "success": "{{property}} operation success"
         }
     },
-    "variable": {
+    "property": {
+        "general": {
+            "process": "process",
+            "login": "login",
+            "register": "registration"
+        },
+        "pagination": {
+            "offset": "page offset",
+            "limit": "page limit"
+        },
         "auth": {
             "auth_token": "auth token",
             "refresh_token": "refresh token"
@@ -44,17 +79,29 @@
             "username": "username",
             "password": "password",
             "full_name": "full name",
+            "first_name": "first name",
+            "last_name": "last name",
             "email": "email",
             "role": "role",
             "profile_picture": "profile picture",
             "status": "status",
             "description": "description",
-            "credential": "credential"
+            "credential": "credential",
+            "amount": "balance/amount"
         },
         "upload": {
             "id": "id",
             "file_path": "file path",
             "description": "description"
+        },
+        "ppob_service": {
+            "ppob_service": "ppob service",
+            "service_code": "service code"
+        },
+        "transaction": {
+            "transaction": "transaction",
+            "service_code": "service code",
+            "top_up_amount": "top up amount"
         }
     }
 }
