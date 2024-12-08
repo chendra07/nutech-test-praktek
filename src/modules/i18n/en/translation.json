@@ -9,7 +9,8 @@
         "not_found": "Data {{property}} not found",
         "not_allowed_role": "Users with role [{{inputRole}}] cannot perform this operation{{additionalMsg}}",
         "conflict": "There is a conflict, unable to process your data{{additionalMsg}}",
-        "internal_server_error": "An error occurred on our server Please try again later{{additionalMsg}}"
+        "internal_server_error": "An error occurred on our server Please try again later{{additionalMsg}}",
+        "not_enough_balance": "unable to purchase this product. Your balance: [{{amount}}], the price: [{{service_tariff}}]"
     },
     "class_validator": {
         "is_UUID": "{{property}} must be in uuid format",
@@ -93,15 +94,14 @@
             "file_path": "file path",
             "description": "description"
         },
+        "ppob_service": {
+            "ppob_service": "ppob service",
+            "service_code": "service code"
+        },
         "transaction": {
             "transaction": "transaction",
             "service_code": "service code",
             "top_up_amount": "top up amount"
-        }
-    },
-    "module": {
-        "transaction": {
-            "not_enough_balance": "unable to purchase this product. Your balance: [{{amount}}], the price: [{{service_tariff}}]"
         }
     }
 }

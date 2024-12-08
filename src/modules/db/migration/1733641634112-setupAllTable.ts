@@ -20,14 +20,16 @@ export class SetupAllTable1733641634112 implements MigrationInterface {
     );
     await queryRunner.query(
       `CREATE TABLE "transaction" (
-        "id" uuid NOT NULL, 
+        "invoice_number" uuid NOT NULL, 
+        "transaction_type" character varying(50) NOT NULL, 
         "description" character varying(255) NOT NULL, 
+        "total_amount" integer NOT NULL,
         "user_id" uuid NOT NULL, 
-        "service_code_id" character varying NOT NULL,
+        "service_code_id" character varying,
         "created_on" TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT now(), 
         "updated_on" TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT now(), 
         "deleted_on" TIMESTAMP WITH TIME ZONE, 
-        CONSTRAINT "PK_TRX_ID" PRIMARY KEY ("id")
+        CONSTRAINT "PK_TRX_ID" PRIMARY KEY ("invoice_number")
     )
 `
     );

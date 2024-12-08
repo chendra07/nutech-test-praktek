@@ -1,9 +1,9 @@
 import { dataSource } from "../db/datasource";
 
 export type PPOBServiceEntityType = {
-  id: string;
-  banner_name: string;
-  description: string;
+  service_code: string;
+  service_name: string;
+  service_tariff: number;
   file_id: string;
   banner_image: string;
 };
@@ -15,4 +15,13 @@ export async function findAllPPOBService() {
   );
 
   return result as PPOBServiceEntityType[];
+}
+
+export async function findOnePPOBServiceByServCode(serviceCode: string) {
+  const result = await dataSource.manager.query(
+    `SELECT * FROM "ppob_service" WHERE service_code = $1`,
+    [serviceCode]
+  );
+
+  return result[0] as PPOBServiceEntityType;
 }

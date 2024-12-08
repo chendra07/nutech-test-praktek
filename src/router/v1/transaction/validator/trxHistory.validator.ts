@@ -14,55 +14,63 @@ export function validateQuery_HistoryPagination(
   next: NextFunction
 ): any {
   const zodQueryHistoryPagination = z.object({
-    limit: z
-      .number({
-        message: t(
-          "class_validator.is_not_empty",
-          {
-            property: t("property.pagination.limit", null, req),
-          },
-          req
-        ),
-      })
-      .min(1, {
-        message: t(
-          "class_validator.is_not_empty",
-          {
-            property: t("property.pagination.limit", null, req),
-          },
-          req
-        ),
-      })
-      .max(100, {
-        message: t(
-          "class_validator.max",
-          {
-            property: t("property.pagination.limit", null, req),
-            max: 100,
-          },
-          req
-        ),
-      }),
-    offset: z
-      .number({
-        message: t(
-          "class_validator.is_not_empty",
-          {
-            property: t("property.pagination.offset", null, req),
-          },
-          req
-        ),
-      })
-      .min(0, {
-        message: t(
-          "class_validator.is_not_empty",
-          {
-            property: t("property.pagination.offset", null, req),
-          },
-          req
-        ),
-      }),
+    limit: z.preprocess(
+      (val) => Number(val),
+      z
+        .number({
+          message: t(
+            "class_validator.is_not_empty",
+            {
+              property: t("property.pagination.limit", null, req),
+            },
+            req
+          ),
+        })
+        .min(1, {
+          message: t(
+            "class_validator.is_not_empty",
+            {
+              property: t("property.pagination.limit", null, req),
+            },
+            req
+          ),
+        })
+        .max(100, {
+          message: t(
+            "class_validator.max",
+            {
+              property: t("property.pagination.limit", null, req),
+              max: 100,
+            },
+            req
+          ),
+        })
+    ),
+    offset: z.preprocess(
+      (val) => Number(val),
+      z
+        .number({
+          message: t(
+            "class_validator.is_not_empty",
+            {
+              property: t("property.pagination.offset", null, req),
+            },
+            req
+          ),
+        })
+        .min(0, {
+          message: t(
+            "class_validator.is_not_empty",
+            {
+              property: t("property.pagination.offset", null, req),
+            },
+            req
+          ),
+        })
+    ),
   });
+
+  console.log(req.query);
 
   const verifyZod = zodQueryHistoryPagination.safeParse(req.query);
 

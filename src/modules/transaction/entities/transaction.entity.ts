@@ -5,16 +5,22 @@ import { UserEntity } from "../../user/entities/user.entity";
 
 @Entity({ name: "transaction" })
 export class TransactionEntity extends BaseEntity {
-  @PrimaryColumn({ type: "uuid" })
-  id: string;
+  @PrimaryColumn({ type: "uuid", name: "invoice_number" })
+  invoiceNumber: string;
 
   @Column({ type: "varchar", length: 255 })
   description: string;
 
+  @Column({ type: "varchar", length: 50, name: "transaction_type" })
+  transactionType: string;
+
+  @Column({ type: "integer", name: "total_amount" })
+  totalAmount: string;
+
   @Column({ type: "varchar", name: "user_id" })
   userId: string;
 
-  @Column({ type: "varchar", name: "service_code_id" })
+  @Column({ type: "varchar", name: "service_code_id", nullable: true })
   serviceCodeId: string;
 
   //relations
@@ -29,6 +35,7 @@ export class TransactionEntity extends BaseEntity {
     (ppobServiceEntity) => ppobServiceEntity.transaction,
     {
       onDelete: "RESTRICT",
+      nullable: true,
     }
   )
   @JoinColumn({ name: "service_code_id" })

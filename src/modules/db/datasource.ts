@@ -8,6 +8,8 @@ import { BannerEntity } from "../banner/entities/banner.entity";
 import { PPOBServiceEntity } from "../ppobService/entities/ppobService.entity";
 import { TransactionEntity } from "../transaction/entities/transaction.entity";
 import { SetupAllTable1733641634112 } from "./migration/1733641634112-setupAllTable";
+import * as fs from "fs";
+import * as path from "path";
 
 const dataSourceOption: DataSourceOptions = {
   type: "postgres",
@@ -25,14 +27,14 @@ const dataSourceOption: DataSourceOptions = {
     TransactionEntity,
   ],
   migrations: [FirstInit1733587750277, SetupAllTable1733641634112],
-  // extra: {
-  //   connectionLimit: 3,
-  //   ssl: {
-  //     ca: fs.readFileSync(
-  //       path.join(process.cwd(), "ap-southeast-2-bundle.pem")
-  //     ),
-  //   },
-  // },
+  extra: {
+    connectionLimit: 3,
+    ssl: {
+      ca: fs.readFileSync(
+        path.join(process.cwd(), "ap-southeast-2-bundle.pem")
+      ),
+    },
+  },
 };
 
 export const dataSource = new DataSource(dataSourceOption);

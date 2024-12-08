@@ -9,7 +9,8 @@
         "not_found": "Data {{property}} tidak ditemukan",
         "not_allowed_role": "Pengguna dengan peran [{{inputRole}}] tidak dapat melakukan operasi ini{{additionalMsg}}",
         "conflict": "Ada konflik, tidak dapat memproses data Anda{{additionalMsg}}",
-        "internal_server_error": "Terjadi kesalahan pada server kami Silakan coba lagi nanti{{additionalMsg}}"
+        "internal_server_error": "Terjadi kesalahan pada server kami Silakan coba lagi nanti{{additionalMsg}}",
+        "not_enough_balance": "tidak dapat membeli produk ini, jumlah saldo anda: [{{amount}}], biaya layanan: [{{service_tariff}}]"
     },
     "class_validator": {
         "is_UUID": "{{property}} UUID harus dalam format yang sesuai",
@@ -93,15 +94,14 @@
             "file_path": "jalur file",
             "description": "deskripsi"
         },
+        "ppob_service": {
+            "ppob_service": "layanan PPOB",
+            "service_code": "kode layanan PPOB"
+        },
         "transaction": {
             "transaction": "transaksi",
             "service_code": "kode layanan",
             "top_up_amount": "jumlah saldo top up"
-        },
-        "module": {
-        "transaction": {
-            "not_enough_balance": "tidak dapat membeli produk ini, jumlah saldo anda: [{{amount}}], biaya layanan: [{{service_tariff}}]"
-        }
-    }
+        }    
     }
 }

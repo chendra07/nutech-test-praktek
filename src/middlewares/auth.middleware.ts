@@ -18,9 +18,13 @@ export async function validateAuthToken(
       req,
       res,
       null,
-      t("response.not_found", {
-        variable: t("property.auth.auth_token"),
-      })
+      t(
+        "response.not_found",
+        {
+          property: t("property.auth.auth_token", null, req),
+        },
+        req
+      )
     );
   }
 
@@ -49,9 +53,13 @@ export async function validateAuthToken(
       req,
       res,
       null,
-      t("response.not_found", {
-        variable: t("property.auth.auth_token"),
-      })
+      t(
+        "response.not_found",
+        {
+          property: t("property.auth.auth_token", null, req),
+        },
+        req
+      )
     );
   }
 
