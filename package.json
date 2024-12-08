@@ -10,8 +10,7 @@
     "i18n": "i18n-types-generator -l en -p \"src/modules/i18n/{{lang}}/{{ns}}.json\" -o \"src/modules/i18n/translations.generated.ts\"",
     "start:prod": "npx tsc && node dist/server.js",
     "start": "node dist/server.js",
-    "build": "tsc",
-    "postinstall": "npm run build",
+    
     "start:dev": "npm run i18n && nodemon --exec ts-node src/server.ts",
     "typeorm": "npx tsc && npx typeorm -d dist/modules/db/datasource.js",
     "migration:run": "npm run typeorm -- migration:run",
