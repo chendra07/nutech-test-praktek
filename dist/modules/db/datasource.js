@@ -41,11 +41,11 @@ const _1733587750277_firstInit_1 = require("./migration/1733587750277-firstInit"
 const user_entity_1 = require("../user/entities/user.entity");
 const file_entity_1 = require("../file/entities/file.entity");
 const banner_entity_1 = require("../banner/entities/banner.entity");
-const ppobService_entity_1 = require("../ppobService/entities/ppobService.entity");
 const transaction_entity_1 = require("../transaction/entities/transaction.entity");
 const _1733641634112_setupAllTable_1 = require("./migration/1733641634112-setupAllTable");
 const fs = __importStar(require("fs"));
 const path = __importStar(require("path"));
+const ppobService_entity_1 = require("../ppobService/entities/ppobService.entity");
 const dataSourceOption = {
     type: "postgres",
     host: utils_1.envi.DB_HOST,
