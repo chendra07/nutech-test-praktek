@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "test for nutech recruitment process",
   "main": "index.js",
+  "engines": {
+    "node": "20.17.0"
+  },
   "scripts": {
     "i18n": "i18n-types-generator -l en -p \"src/modules/i18n/{{lang}}/{{ns}}.json\" -o \"src/modules/i18n/translations.generated.ts\"",
     "build": "npx tsc",
