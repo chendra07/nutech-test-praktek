@@ -14,5 +14,7 @@ techstack:
 - TypeORM
 - TypeORM Seeding
 
+note: this app support 2 languanges, you can add "Accept-Language" header to "en" for English or "id" for Indonesia, default: Indonesia
+
 ERD image:
 ![Local Image](assets/erd.png "ERD")
