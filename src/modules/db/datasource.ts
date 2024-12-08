@@ -9,7 +9,7 @@ import { TransactionEntity } from "../transaction/entities/transaction.entity";
 import { SetupAllTable1733641634112 } from "./migration/1733641634112-setupAllTable";
 import * as fs from "fs";
 import * as path from "path";
-import { PPOBServiceEntity } from "../ppobService/entities/ppobService.entity";
+import { PPOBServiceEntity } from "../ppobService/entities/PPOBService.entity";
 
 const dataSourceOption: DataSourceOptions = {
   type: "postgres",

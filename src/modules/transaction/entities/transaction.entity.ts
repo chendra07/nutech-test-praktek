@@ -1,7 +1,7 @@
 import { Column, Entity, JoinColumn, ManyToOne, PrimaryColumn } from "typeorm";
-import { PPOBServiceEntity } from "../../ppobService/entities/ppobService.entity";
 import { BaseEntity } from "../../db/entities/base.entity";
 import { UserEntity } from "../../user/entities/user.entity";
+import { PPOBServiceEntity } from "../../ppobService/entities/PPOBService.entity";
 
 @Entity({ name: "transaction" })
 export class TransactionEntity extends BaseEntity {

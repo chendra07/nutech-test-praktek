@@ -2,7 +2,7 @@ import { dataSource } from "../db/datasource";
 import { v4 as uuidv4 } from "uuid";
 import { UserEntityType } from "../user/user.service";
 import { EntityManager } from "typeorm";
-import { PPOBServiceEntityType } from "../ppobService/ppobService.service";
+import { PPOBServiceEntityType } from "../ppobService/PPOBService.service";
 
 export type TransactionEntityType = {
   invoice_number: string;

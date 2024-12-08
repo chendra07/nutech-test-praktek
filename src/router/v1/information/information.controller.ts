@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 import { findAllBanner } from "../../../modules/banner/banner.service";
 import { responses } from "../../../utils/responses.util";
-import { findAllPPOBService } from "../../../modules/ppobService/ppobService.service";
+import { findAllPPOBService } from "../../../modules/ppobService/PPOBService.service";
 
 export async function httpGetAllBanner(
   req: Request,

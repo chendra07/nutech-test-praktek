@@ -12,9 +12,9 @@ import {
 import { BodyTopUpType } from "./validator/topup.validator";
 import { dataSource } from "../../../modules/db/datasource";
 import { BodyPurchaseType } from "./validator/trxPurchase.validator";
-import { findOnePPOBServiceByServCode } from "../../../modules/ppobService/ppobService.service";
 import { t } from "../../../utils";
 import { QueryHistoryPaginationType } from "./validator/trxHistory.validator";
+import { findOnePPOBServiceByServCode } from "../../../modules/ppobService/PPOBService.service";
 
 const numToIdr = Intl.NumberFormat("id-ID", {
   style: "currency",
