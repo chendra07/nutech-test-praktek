@@ -8,8 +8,7 @@
   },
   "scripts": {
     "i18n": "i18n-types-generator -l en -p \"src/modules/i18n/{{lang}}/{{ns}}.json\" -o \"src/modules/i18n/translations.generated.ts\"",
-    "build": "npx tsc",
-    "start:prod": "npm run build && node dist/server.js",
+    "start:prod": "npx tsc && node dist/server.js",
     "start": "node dist/server.js",
     "start:dev": "npm run i18n && nodemon --exec ts-node src/server.ts",
     "typeorm": "npm run build && npx typeorm -d dist/modules/db/datasource.js",
