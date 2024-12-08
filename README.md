@@ -5,6 +5,7 @@ PPOB simulation using ExpressJS by Chendra Dewangga
 techstack:
 
 - ExpressJS
+- i18next
 - Zod
 - JsonWebToken
 - PostgreSQL
