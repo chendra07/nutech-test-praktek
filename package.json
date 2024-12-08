@@ -11,11 +11,11 @@
     "start:prod": "npx tsc && node dist/server.js",
     "start": "node dist/server.js",
     "start:dev": "npm run i18n && nodemon --exec ts-node src/server.ts",
-    "typeorm": "npm run build && npx typeorm -d dist/modules/db/datasource.js",
+    "typeorm": "npx tsc && npx typeorm -d dist/modules/db/datasource.js",
     "migration:run": "npm run typeorm -- migration:run",
     "migration:generate": "npm run typeorm -- migration:generate",
     "migration:revert": "npm run typeorm -- migration:revert",
-    "seed:run": "npm run build && typeorm-seeding seed -d dist/modules/db/datasource.js dist/modules/db/seeder/*.seeder.js"
+    "seed:run": "npx tsc && typeorm-seeding seed -d dist/modules/db/datasource.js dist/modules/db/seeder/*.seeder.js"
   },
   "author": "Chendra Dewangga",
   "license": "ISC",
