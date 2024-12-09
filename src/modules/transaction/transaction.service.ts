@@ -3,6 +3,7 @@ import { v4 as uuidv4 } from "uuid";
 import { UserEntityType } from "../user/user.service";
 import { EntityManager } from "typeorm";
 import { PPOBServiceEntityType } from "../ppobService/PPOBService.service";
+import moment from "moment-timezone";
 
 export type TransactionEntityType = {
   invoice_number: string;
@@ -11,6 +12,9 @@ export type TransactionEntityType = {
   total_amount: number;
   user_id: string;
   service_code_id: string;
+  created_on: Date;
+  updated_on: Date;
+  deleted_on: Date;
 };
 
 export async function createTransactionTopUp(
@@ -74,11 +78,20 @@ export async function findAllTransaction(
 ) {
   const query = `SELECT * FROM "transaction" WHERE user_id = $1 ORDER BY created_on DESC LIMIT $2 OFFSET $3`;
 
-  const result = await dataSource.manager.query(query, [
+  const result = (await dataSource.manager.query(query, [
     user.id,
     limit,
     offset,
-  ]);
+  ])) as TransactionEntityType[];
 
-  return result as TransactionEntityType[];
+  const modifiedResult = result?.length
+    ? result.map(({ updated_on, deleted_on, created_on, ...rest }) => ({
+        ...rest,
+        created_on: moment(created_on)
+          .tz("Asia/Jakarta")
+          .format("YYYY-MM-DD HH:mm:ss"),
+      }))
+    : [];
+
+  return modifiedResult;
 }

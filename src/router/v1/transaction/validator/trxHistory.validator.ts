@@ -70,8 +70,6 @@ export function validateQuery_HistoryPagination(
     ),
   });
 
-  console.log(req.query);
-
   const verifyZod = zodQueryHistoryPagination.safeParse(req.query);
 
   if (!verifyZod.success) {
