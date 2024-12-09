@@ -11,9 +11,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.TransactionEntity = void 0;
 const typeorm_1 = require("typeorm");
-const ppobService_entity_1 = require("../../ppobService/entities/ppobService.entity");
 const base_entity_1 = require("../../db/entities/base.entity");
 const user_entity_1 = require("../../user/entities/user.entity");
+const PPOBService_entity_1 = require("../../ppobService/entities/PPOBService.entity");
 let TransactionEntity = class TransactionEntity extends base_entity_1.BaseEntity {
 };
 exports.TransactionEntity = TransactionEntity;
@@ -49,12 +49,12 @@ __decorate([
     __metadata("design:type", user_entity_1.UserEntity)
 ], TransactionEntity.prototype, "user", void 0);
 __decorate([
-    (0, typeorm_1.ManyToOne)(() => ppobService_entity_1.PPOBServiceEntity, (ppobServiceEntity) => ppobServiceEntity.transaction, {
+    (0, typeorm_1.ManyToOne)(() => PPOBService_entity_1.PPOBServiceEntity, (ppobServiceEntity) => ppobServiceEntity.transaction, {
         onDelete: "RESTRICT",
         nullable: true,
     }),
     (0, typeorm_1.JoinColumn)({ name: "service_code_id" }),
-    __metadata("design:type", ppobService_entity_1.PPOBServiceEntity)
+    __metadata("design:type", PPOBService_entity_1.PPOBServiceEntity)
 ], TransactionEntity.prototype, "ppobService", void 0);
 exports.TransactionEntity = TransactionEntity = __decorate([
     (0, typeorm_1.Entity)({ name: "transaction" })

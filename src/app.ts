@@ -32,20 +32,3 @@ app.get("/", (req: Request, res: Response): any => {
 });
 
 app.use(indexRouter);
-
-// app.post(
-//   "/a",
-//   validateInput_Register,
-//   async (req: Request, res: Response): Promise<any> => {
-//     const x = await dataSource.manager.transaction(async (t) => {
-//       return await t.find(SeederEntity);
-//     });
-
-//     return responses.res200(
-//       req,
-//       res,
-//       null,
-//       "nutech recruitment take home test"
-//     );
-//   }
-// );

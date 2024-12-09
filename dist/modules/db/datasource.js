@@ -45,7 +45,7 @@ const transaction_entity_1 = require("../transaction/entities/transaction.entity
 const _1733641634112_setupAllTable_1 = require("./migration/1733641634112-setupAllTable");
 const fs = __importStar(require("fs"));
 const path = __importStar(require("path"));
-const ppobService_entity_1 = require("../ppobService/entities/ppobService.entity");
+const PPOBService_entity_1 = require("../ppobService/entities/PPOBService.entity");
 const dataSourceOption = {
     type: "postgres",
     host: utils_1.envi.DB_HOST,
@@ -58,7 +58,7 @@ const dataSourceOption = {
         user_entity_1.UserEntity,
         file_entity_1.FileEntity,
         banner_entity_1.BannerEntity,
-        ppobService_entity_1.PPOBServiceEntity,
+        PPOBService_entity_1.PPOBServiceEntity,
         transaction_entity_1.TransactionEntity,
     ],
     migrations: [_1733587750277_firstInit_1.FirstInit1733587750277, _1733641634112_setupAllTable_1.SetupAllTable1733641634112],

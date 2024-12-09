@@ -35,7 +35,6 @@ function validateQuery_HistoryPagination(req, res, next) {
             }, req),
         })),
     });
-    console.log(req.query);
     const verifyZod = zodQueryHistoryPagination.safeParse(req.query);
     if (!verifyZod.success) {
         const translatedErrors = (0, utils_1.extractZodError)(verifyZod.error);

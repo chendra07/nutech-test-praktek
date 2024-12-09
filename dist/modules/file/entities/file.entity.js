@@ -13,8 +13,8 @@ exports.FileEntity = void 0;
 const typeorm_1 = require("typeorm");
 const user_entity_1 = require("../../user/entities/user.entity");
 const banner_entity_1 = require("../../banner/entities/banner.entity");
-const ppobService_entity_1 = require("../../ppobService/entities/ppobService.entity");
 const base_entity_1 = require("../../db/entities/base.entity");
+const PPOBService_entity_1 = require("../../ppobService/entities/PPOBService.entity");
 let FileEntity = class FileEntity extends base_entity_1.BaseEntity {
 };
 exports.FileEntity = FileEntity;
@@ -43,8 +43,8 @@ __decorate([
     __metadata("design:type", banner_entity_1.BannerEntity)
 ], FileEntity.prototype, "banner", void 0);
 __decorate([
-    (0, typeorm_1.OneToOne)(() => ppobService_entity_1.PPOBServiceEntity, (PPOBServiceEntity) => PPOBServiceEntity.file),
-    __metadata("design:type", ppobService_entity_1.PPOBServiceEntity)
+    (0, typeorm_1.OneToOne)(() => PPOBService_entity_1.PPOBServiceEntity, (PPOBServiceEntity) => PPOBServiceEntity.file),
+    __metadata("design:type", PPOBService_entity_1.PPOBServiceEntity)
 ], FileEntity.prototype, "ppobService", void 0);
 exports.FileEntity = FileEntity = __decorate([
     (0, typeorm_1.Entity)({ name: "file" })
